@@ -95,6 +95,7 @@ Stwórz nowy pusty plik `blog/urls.py`. Super! Teraz dodaj dwie pierwsze linijki
 
 ```python
 from django.conf.urls import url
+from django.contrib import admin
 from . import views
 ```
 
