@@ -71,6 +71,15 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 ```
 
+## Ustawienie ALLOWED_HOSTS
+
+Lista ALLOWED_HOSTS jest pusta, domyślne ustawienie hosta to:  [ 'localhost', '127.0.0.1', '[:: 1]']. Jednak wdrożenie to nie będzie działać w PythonAnywhere, więc zmień ustawienie na poniższe:
+
+```python
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+```
+Dzięki temu unikniemy błędu Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS)
+
 ## Ustawienie bazy danych
 
 Istnieje duży wybór baz danych, w których możemy trzymać dane naszej strony. My użyjemy bazy domyślnej, czyli `sqlite3`.
